@@ -1,6 +1,6 @@
 public class Employee {
 
-    private static int counter = 1;
+    private static int counter = 0;
     private final String firstName;
     private final String middleName;
     private final String lastName;
@@ -49,7 +49,7 @@ public class Employee {
         return id;
     }
 
-    public String fio() {
+    public String getFullName() {
         return lastName + " " + firstName + " " + middleName;
     }
 

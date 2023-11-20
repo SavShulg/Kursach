@@ -23,20 +23,19 @@ public class Main {
                 12334500, 1);
 
         printEmployees();
-        System.out.println(sumSalary());
-        System.out.println(minSalary());
-        System.out.println(maxSalary());
-        System.out.println(averageSalary());
-        printEmloyeeFIO();
+        System.out.println(getSumSalary());
+        System.out.println(getMinSalary());
+        System.out.println(getMaxSalary());
+        System.out.println(getAverageSalary());
+        printFullNameEmployee();
     }
     private static void printEmployees(){
         for (Employee employee : employees) {
-            System.out.println(employee);
             
         }
     }
 
-    private static int sumSalary() {
+    private static int getSumSalary() {
         int sum = 0;
         for (Employee employee : employees) {
             sum += employee.getSalary();
@@ -44,7 +43,7 @@ public class Main {
         }
         return sum;
     }
-    private static Employee minSalary () {
+    private static Employee getMinSalary () {
         int index = 0;
         int minSalary = 0;
         for (int i = 0; i < employees.length; i++) {
@@ -54,7 +53,7 @@ public class Main {
             }
         }
         return employees[index];
-    }private static Employee maxSalary () {
+    }private static Employee getMaxSalary () {
         int index = 0;
         int maxSalary = 0;
         for (int i = 0; i < employees.length; i++) {
@@ -65,12 +64,12 @@ public class Main {
         }
         return employees[index];
     }
-    private static double averageSalary() {
-        return (double) sumSalary() / employees.length;
+    private static double getAverageSalary() {
+        return (double) getSumSalary() / employees.length;
     }
-    private static void printEmloyeeFIO() {
+    private static void printFullNameEmployee() {
         for (Employee employee : employees) {
-            System.out.println(employee.getLastName() + " " + employee.getFirstName() + " " + employee.getMiddleName());
+            System.out.println(employee.getFullName());
 
         }
     }
